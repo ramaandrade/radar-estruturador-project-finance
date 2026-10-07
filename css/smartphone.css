@@ -1,0 +1,394 @@
+/**
+ * smartphone.css
+ * Moldura e Simulador de Smartphone Realista
+ * Adaptação automática: no desktop renderiza o chassi de celular elegante com Dynamic Island;
+ * em smartphones reais (max-width: 540px) renderiza 100% nativo em tela cheia.
+ */
+
+:root {
+  --phone-width: 420px;
+  --phone-height: 870px;
+  --phone-radius: 48px;
+  --phone-bezel: 12px;
+  --phone-border: #2D3748;
+  --phone-bg-chassis: linear-gradient(145deg, #1E293B, #0F172A);
+  --phone-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 0 4px rgba(255, 255, 255, 0.15);
+}
+
+/* ==========================================================================
+   DESKTOP CANVAS WRAPPER
+   ========================================================================== */
+
+.desktop-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 20px 16px;
+  background: radial-gradient(circle at 50% 10%, #064E3B 0%, #080D1A 60%, #030712 100%);
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Barra de Controles do Simulador no Topo do Desktop */
+.desktop-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: var(--phone-width);
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px 14px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 99px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #94A3B8;
+  font-size: 0.78rem;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.desktop-controls-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #F8FAFC;
+}
+
+.app-badge-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(135deg, #059669, #10B981);
+  color: #FFFFFF;
+  padding: 3px 9px;
+  border-radius: 99px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.desktop-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.frame-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #CBD5E1;
+  padding: 4px 11px;
+  border-radius: 99px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.frame-btn:hover {
+  background: rgba(16, 185, 129, 0.25);
+  color: #34D399;
+  border-color: rgba(52, 211, 153, 0.4);
+}
+
+/* ==========================================================================
+   O SMARTPHONE (CHASSI DE HARDWARE REALISTA)
+   ========================================================================== */
+
+.smartphone-device {
+  position: relative;
+  width: var(--phone-width);
+  height: var(--phone-height);
+  max-height: calc(100vh - 70px);
+  max-height: calc(100dvh - 70px);
+  background: var(--phone-bg-chassis);
+  border-radius: var(--phone-radius);
+  padding: var(--phone-bezel);
+  box-shadow: var(--phone-shadow);
+  border: 3px solid #334155;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Botões Físicos Laterais */
+.phone-btn-volume-up,
+.phone-btn-volume-down,
+.phone-btn-power {
+  position: absolute;
+  background: #334155;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.phone-btn-volume-up {
+  left: -6px;
+  top: 140px;
+  width: 4px;
+  height: 48px;
+}
+
+.phone-btn-volume-down {
+  left: -6px;
+  top: 200px;
+  width: 4px;
+  height: 48px;
+}
+
+.phone-btn-power {
+  right: -6px;
+  top: 165px;
+  width: 4px;
+  height: 65px;
+}
+
+/* Tela Touchscreen */
+.smartphone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #080D1A;
+  border-radius: calc(var(--phone-radius) - var(--phone-bezel));
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Barra de Status do Celular */
+.phone-status-bar {
+  height: 42px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #080D1A;
+  color: #F8FAFC;
+  font-size: 0.80rem;
+  font-weight: 600;
+  z-index: 50;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.status-time {
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+/* Ilha Dinâmica (Dynamic Island) */
+.dynamic-island {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 9px;
+  width: 108px;
+  height: 24px;
+  background: #000000;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 10px;
+  gap: 8px;
+  z-index: 60;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.island-camera {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle at 35% 35%, #1E293B, #0F172A);
+  border-radius: 50%;
+  border: 1px solid #334155;
+}
+
+.island-sensor {
+  width: 7px;
+  height: 7px;
+  background: #111827;
+  border-radius: 50%;
+}
+
+/* Ícones de Status: Rede, Wifi, Bateria */
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+}
+
+.status-network {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5px;
+  height: 10px;
+}
+
+.network-bar {
+  width: 2.5px;
+  background: #F8FAFC;
+  border-radius: 1px;
+}
+
+.network-bar:nth-child(1) { height: 35%; }
+.network-bar:nth-child(2) { height: 55%; }
+.network-bar:nth-child(3) { height: 80%; }
+.network-bar:nth-child(4) { height: 100%; }
+
+.status-wifi {
+  font-size: 0.70rem;
+  font-weight: 800;
+  color: #34D399;
+}
+
+.status-battery {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.72rem;
+}
+
+.battery-pill {
+  width: 20px;
+  height: 10px;
+  border: 1px solid #94A3B8;
+  border-radius: 3px;
+  padding: 1px;
+  position: relative;
+}
+
+.battery-pill::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 2px;
+  width: 2px;
+  height: 4px;
+  background: #94A3B8;
+  border-radius: 0 1px 1px 0;
+}
+
+.battery-fill {
+  width: 90%;
+  height: 100%;
+  background: #10B981;
+  border-radius: 1px;
+}
+
+/* Área Touch Rolável do Conteúdo */
+.phone-scroll-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+/* Barra Inferior Estilo iOS Home Indicator */
+.phone-home-indicator {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 99px;
+  pointer-events: none;
+  z-index: 40;
+}
+
+/* ==========================================================================
+   MODO TELA CHEIA (FULLSCREEN TOGGLE) NO DESKTOP
+   ========================================================================== */
+
+.smartphone-device.fullscreen-mode {
+  width: 100% !important;
+  max-width: 680px;
+  height: auto !important;
+  max-height: none !important;
+  border-radius: 16px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.smartphone-device.fullscreen-mode .phone-btn-volume-up,
+.smartphone-device.fullscreen-mode .phone-btn-volume-down,
+.smartphone-device.fullscreen-mode .phone-btn-power,
+.smartphone-device.fullscreen-mode .dynamic-island,
+.smartphone-device.fullscreen-mode .phone-home-indicator {
+  display: none;
+}
+
+.smartphone-device.fullscreen-mode .phone-status-bar {
+  display: none;
+}
+
+.smartphone-device.fullscreen-mode .smartphone-screen {
+  border-radius: 16px;
+  overflow: visible;
+}
+
+.smartphone-device.fullscreen-mode .phone-scroll-content {
+  overflow: visible;
+}
+
+/* ==========================================================================
+   SMARTPHONES REAIS (TELAS MOBILE NATIVAS <= 540px)
+   ========================================================================== */
+
+@media (max-width: 540px) {
+  .desktop-wrapper {
+    padding: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: #080D1A;
+  }
+
+  .desktop-controls-bar {
+    display: none;
+  }
+
+  .smartphone-device {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .phone-btn-volume-up,
+  .phone-btn-volume-down,
+  .phone-btn-power,
+  .phone-status-bar,
+  .phone-home-indicator {
+    display: none !important;
+  }
+
+  .smartphone-screen {
+    border-radius: 0 !important;
+    border: none !important;
+  }
+
+  .mobile-app-wrapper {
+    padding-top: calc(12px + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  }
+}

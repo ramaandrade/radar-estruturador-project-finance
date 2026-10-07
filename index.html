@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#064E3B">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Passo 6: Radar do Estruturador: Financiamento de Projetos (Project Finance) - Fast Page mobile para desmistificar a engenharia financeira de grandes obras de infraestrutura.">
+  <title>Passo 6 - Radar do Estruturador: Financiamento de Projetos (Project Finance)</title>
+
+  <!-- Pré-carregamento de DNS (DNS Prefetching & Preconnect) conforme PRD -->
+  <link rel="dns-prefetch" href="https://www.ppi.gov.br">
+  <link rel="preconnect" href="https://www.ppi.gov.br" crossorigin>
+  <link rel="dns-prefetch" href="https://www.bndes.gov.br">
+  <link rel="preconnect" href="https://www.bndes.gov.br" crossorigin>
+  <link rel="dns-prefetch" href="https://www.abdib.org.br">
+  <link rel="preconnect" href="https://www.abdib.org.br" crossorigin>
+
+  <!-- PWA Manifest & Favicon -->
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/svg+xml" href="./assets/icon-192.svg">
+  <link rel="apple-touch-icon" href="./assets/icon-192.svg">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/smartphone.css">
+</head>
+<body>
+
+  <!-- Wrapper Geral do Canvas Desktop -->
+  <div class="desktop-wrapper">
+
+    <!-- Barra de Ferramentas Superior do Desktop (Controles de Visualização) -->
+    <header class="desktop-controls-bar" aria-label="Controles do Simulador">
+      <div class="desktop-controls-left">
+        <span class="app-badge-title">🏗️ Passo 6</span>
+        <span>Radar do Estruturador: Project Finance</span>
+      </div>
+      <div class="desktop-controls-right">
+        <button class="frame-btn" id="frame-toggle-btn" title="Alternar entre visualização de smartphone e tela cheia" type="button">
+          🖥️ Tela Cheia
+        </button>
+      </div>
+    </header>
+
+    <!-- O SMARTPHONE (MOLDURA REALISTA DO DISPOSITIVO MÓVEL) -->
+    <main class="smartphone-device" id="smartphone-chassis">
+
+      <!-- Botões Físicos Laterais do Aparelho -->
+      <div class="phone-btn-volume-up" title="Aumentar Volume" aria-hidden="true"></div>
+      <div class="phone-btn-volume-down" title="Diminuir Volume" aria-hidden="true"></div>
+      <div class="phone-btn-power" title="Botão Power" aria-hidden="true"></div>
+
+      <!-- TELA TOUCHSCREEN DO CELULAR -->
+      <div class="smartphone-screen" id="app-screen">
+
+        <!-- BARRA DE STATUS DO CELULAR (Hora, Ilha Dinâmica, Bateria, 5G) -->
+        <div class="phone-status-bar">
+          <span class="status-time" id="phone-clock">10:45</span>
+          
+          <!-- Ilha Dinâmica (Notch com câmera e sensor) -->
+          <div class="dynamic-island" id="dynamic-island">
+            <div class="island-camera"></div>
+            <div class="island-sensor"></div>
+          </div>
+
+          <div class="status-icons">
+            <div class="status-network">
+              <span class="network-bar"></span>
+              <span class="network-bar"></span>
+              <span class="network-bar"></span>
+              <span class="network-bar"></span>
+            </div>
+            <span class="status-wifi">5G</span>
+            <div class="status-battery">
+              <span>98%</span>
+              <div class="battery-pill">
+                <div class="battery-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ÁREA TOUCH ROLÁVEL COM O CONTEÚDO DO FAST PAGE -->
+        <div class="phone-scroll-content" id="phone-scrollable-area">
+          <div class="mobile-app-wrapper" role="region" aria-label="Conteúdo da aula rápida de Project Finance">
+    
+            <!-- Topbar: Conectividade & Telemetria Discreta -->
+            <header class="app-topbar">
+              <div id="offline-status-pill" class="offline-pill" role="status" aria-live="polite">
+                <span class="status-dot"></span>
+                <span class="status-text">Online • Cache Ativo</span>
+              </div>
+
+              <div class="topbar-actions">
+                <button id="open-inspector-btn" class="telemetry-btn" type="button" title="Abrir painel discreto de telemetria docente">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 20v-6M6 20V10M18 20V4"/>
+                  </svg>
+                  Scroll: <strong id="telemetry-scroll-badge">0%</strong>
+                </button>
+              </div>
+            </header>
+
+            <!-- Hero / Cabeçalho do Aulão -->
+            <section class="app-hero">
+              <div class="hero-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                  <line x1="4" y1="22" x2="4" y2="15"/>
+                </svg>
+                Etapa Final da Trilha • Passo 6 de 6
+              </div>
+
+              <h1 class="hero-title">
+                Passo 6: <span class="gradient-text">Radar do Estruturador</span><br>
+                Financiamento de Projetos
+              </h1>
+
+              <div class="hero-meta-row">
+                <span class="time-pill">
+                  ⏱️ Leitura rápida: ~2 min
+                </span>
+                <span class="time-pill" style="border-color: rgba(52, 211, 153, 0.35); color: #34D399;">
+                  🎯 Project Finance
+                </span>
+              </div>
+              
+              <p class="hero-description">
+                A engenharia financeira das grandes obras: descubra como projetos bilionários de rodovias, usinas e saneamento saem do papel <strong>sem quebrar as empresas patrocinadoras</strong>, onde <strong>o contrato é a verdadeira garantia</strong>.
+              </p>
+
+              <!-- Sequência Pedagógica dos 6 Passos -->
+              <nav class="step-track" aria-label="Trilha de aprendizagem">
+                <div class="step-chip">1. Teoria</div>
+                <div class="step-chip">2. Vídeos</div>
+                <div class="step-chip">3. Slides</div>
+                <div class="step-chip">4. Casos</div>
+                <div class="step-chip">5. Jogos</div>
+                <div class="step-chip active">6. Radar</div>
+              </nav>
+
+              <!-- Barra de Progresso de Leitura do Aulão -->
+              <div class="progress-container" aria-label="Progresso da leitura">
+                <div class="progress-header">
+                  <span class="progress-label">Exploração dos Módulos</span>
+                  <span id="reading-progress-text" class="progress-value">1/3 explorados</span>
+                </div>
+                <div class="progress-track" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">
+                  <div id="reading-progress-fill" class="progress-fill"></div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Controles Rápidos -->
+            <section class="quick-controls" aria-label="Controles da leitura">
+              <span class="section-hint">Tópicos Fundamentais</span>
+              <button id="toggle-all-btn" class="toggle-all-button" type="button">Expandir todos</button>
+            </section>
+
+            <!-- Container dos Cards Acordeões (Blocos de Cor Alternados) -->
+            <div class="cards-container">
+
+              <!-- ====================================================================
+                   CARD A: O MINDSET (A ENGENHARIA E O ISOLAMENTO)
+                   ==================================================================== -->
+              <article class="modular-card is-open" data-card-id="card-a" id="secao-mindset">
+                <button class="card-header" type="button" aria-expanded="true" aria-controls="content-card-a">
+                  <div class="card-icon-wrapper color-a" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                    </svg>
+                  </div>
+                  <div class="card-title-group">
+                    <span class="card-badge">Card A • A Engenharia e o Isolamento</span>
+                    <h2 class="card-title">O Mindset: O Projeto é o Rei & SPE</h2>
+                  </div>
+                  <div class="card-chevron" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                  </div>
+                </button>
+
+                <div class="card-content" id="content-card-a">
+                  <p class="content-lead">
+                    Em financiamento corporativo tradicional, o banco olha o balanço da matriz. Em <strong>Project Finance</strong>, a lógica se inverte: <strong>o contrato é a verdadeira garantia</strong> e o projeto precisa se sustentar sozinho.
+                  </p>
+
+                  <!-- Tópico 1: O Projeto é o Rei (Non-Recourse) -->
+                  <div class="topic-block">
+                    <div class="topic-header">
+                      <span class="topic-tag">Garantia Exclusiva</span>
+                      <h3 class="topic-title">O Projeto é o Rei (<span class="term-highlight">Non-Recourse</span>)</h3>
+                    </div>
+                    <p class="topic-body">
+                      Em <strong>Project Finance</strong>, a dívida bilionária é paga exclusivamente pelo <strong>fluxo de caixa gerado pelo próprio projeto</strong> — como as tarifas de pedágio de uma rodovia ou a energia comercializada de uma usina hidrelétrica. Se o projeto fracassar, os bancos credores assumem os ativos e as receitas do empreendimento, mas <strong>não podem (em regra) tomar os bens das empresas acionistas (<span class="term-highlight">Sponsors</span>)</strong>. O financiamento é estruturado no modelo de <em>recurso limitado</em> ou <em>sem recurso</em> (<strong>Non-Recourse Debt</strong>).
+                    </p>
+                  </div>
+
+                  <!-- Tópico 2: A Blindagem da SPE -->
+                  <div class="topic-block">
+                    <div class="topic-header">
+                      <span class="topic-tag">Blindagem Patrimonial</span>
+                      <h3 class="topic-title">A Blindagem da <span class="term-highlight">SPE</span></h3>
+                    </div>
+                    <p class="topic-body">
+                      Nunca se mistura o caixa de um megaprojeto com a contabilidade da construtora. Cria-se um CNPJ autônomo e exclusivo chamado <strong>Sociedade de Propósito Específico (SPE)</strong>, constituído única e exclusivamente para erguer e operar aquele ativo. Essa blindagem protege os dois lados: <strong>impede que uma crise financeira na matriz "mãe" contamine o projeto bilionário</strong> e impede que os credores do projeto executem o patrimônio dos sócios.
+                    </p>
+
+                    <!-- Mini Arquitetura Visual da SPE -->
+                    <div class="spe-architecture-card">
+                      <div class="matrix-title">Isolamento Societário da SPE</div>
+                      <div class="spe-flow">
+                        <div class="spe-node">Sponsors (Sócios)</div>
+                        <div class="spe-arrow">➔ 20-30% Equity ➔</div>
+                        <div class="spe-node highlight-node">SPE (CNPJ Virgem)</div>
+                        <div class="spe-arrow">➔ 70-80% Dívida ➔</div>
+                        <div class="spe-node">Bancos & Mercado</div>
+                      </div>
+                      <p class="spe-footer-note">
+                        🔒 Caixa do projeto fica retido em <em>Contas Reserva</em> geridas pelo agente fiduciário.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Tópico 3: O Jogo do Risco (A Matriz) -->
+                  <div class="topic-block">
+                    <div class="topic-header">
+                      <span class="topic-tag">Engenharia Contratual</span>
+                      <h3 class="topic-title">O Jogo do Risco (<span class="term-highlight">A Matriz</span>)</h3>
+                    </div>
+                    <p class="topic-body">
+                      Financiar um projeto é um jogo sofisticado de <strong>alocar cada risco a quem tem melhor capacidade técnica de mitigá-lo</strong>. O banco só assina o cheque se a <strong>Matriz de Riscos</strong> contratual estiver 100% amarrada.
+                    </p>
+
+                    <!-- Matriz de Riscos Interativa -->
+                    <div class="risk-matrix-card">
+                      <div class="risk-matrix-header">
+                        <span class="matrix-title">⚡ Matriz Interativa de Alocação de Risco</span>
+                        <span class="matrix-hint">Toque para explorar</span>
+                      </div>
+
+                      <div class="risk-tab-group" role="tablist">
+                        <button class="risk-tab-btn active" data-risk="construction" type="button">🏗️ Obra & Atraso</button>
+                        <button class="risk-tab-btn" data-risk="demand" type="button">⚡ Demanda & Venda</button>
+                        <button class="risk-tab-btn" data-risk="operation" type="button">⚙️ Operação (O&M)</button>
+                        <button class="risk-tab-btn" data-risk="regulatory" type="button">📜 Regulação & Licença</button>
+                      </div>
+
+                      <div class="risk-detail-box" id="risk-detail-box">
+                        <div class="detail-row">
+                          <strong id="risk-detail-title">Risco de Construção, Atraso e Sobrecusto (Completion Risk)</strong>
+                        </div>
+                        <div class="detail-row">
+                          <span>Quem assume: </span><strong id="risk-detail-bearer" class="term-highlight">Empreiteira / Construtora (EPCista)</strong>
+                        </div>
+                        <div class="detail-row">
+                          <span>Contrato de amarração: </span><strong id="risk-detail-contract" class="term-contrast">Contrato EPC Turnkey (Engineering, Procurement & Construction)</strong>
+                        </div>
+                        <p class="detail-explain" id="risk-detail-explain">
+                          Se a obra estourar o orçamento ou atrasar 1 ano, quem paga a conta é a empreiteira por meio de garantias de performance (Performance Bonds) e penalidades contratuais. O banco credor não aceita que a dívida aumente por ineficiência da obra.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </article>
+
+              <!-- ====================================================================
+                   CARD B: A MECÂNICA PRÁTICA (AÇÕES DO ESTRUTURADOR)
+                   ==================================================================== -->
+              <article class="modular-card" data-card-id="card-b" id="secao-mecanica">
+                <button class="card-header" type="button" aria-expanded="false" aria-controls="content-card-b">
+                  <div class="card-icon-wrapper color-b" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                  </div>
+                  <div class="card-title-group">
+                    <span class="card-badge">Card B • Ações do Estruturador</span>
+                    <h2 class="card-title">A Mecânica: Alavancagem, DSCR & Debêntures</h2>
+                  </div>
+                  <div class="card-chevron" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                  </div>
+                </button>
+
+                <div class="card-content" id="content-card-b">
+                  <p class="content-lead">
+                    O estruturador financeiro equilibra duas forças vitais: maximizar o retorno dos sócios via alavancagem sem comprometer a liquidez exigida pelos credores.
+                  </p>
+
+                  <!-- Tópico 1: A Mágica da Alavancagem -->
+                  <div class="topic-block">
+                    <div class="topic-header">
+                      <span class="topic-tag">Estrutura de Capital</span>
+                      <h3 class="topic-title">A Mágica da <span class="term-contrast">Alavancagem</span></h3>
+                    </div>
+                    <p class="topic-body">
+                      Obras de infraestrutura exigem bilhões e seriam inviáveis se os sócios tivessem que pagar tudo do próprio bolso. A regra de ouro é desenhar a captação com <strong>70% a 80% de Dívida</strong> (financiamentos de longo prazo e debêntures) e apenas <strong>20% a 30% de <span class="term-highlight">Equity</span></strong> (capital próprio dos patrocinadores). Essa altíssima alavancagem amplifica a Taxa Interna de Retorno (<strong>TIR do Acionista</strong>), permitindo ao sócio capturar rentabilidades excepcionais investindo uma fração mínima do custo total.
+                    </p>
+
+                    <!-- Simulador de Alavancagem 70/30 a 80/20 -->
+                    <div class="leverage-sim-box">
+                      <div class="matrix-title">Simulador: Proporção de Capital (Projeto de R$ 1 Bilhão)</div>
+                      
+                      <div class="sim-slider-row">
+                        <label for="leverage-slider" style="display:flex; justify-content:space-between; font-size:0.75rem; margin-bottom:6px;">
+                          <span>Composição de Dívida (<span class="term-contrast">Debt</span>)</span>
+                          <strong id="debt-pct-val" style="color:#38BDF8;">75%</strong>
+                        </label>
+                        <input type="range" id="leverage-slider" class="sim-slider" min="60" max="85" step="5" value="75" aria-label="Ajustar percentual de dívida">
+                      </div>
+
+                      <div class="capital-split-cards">
+                        <div class="split-card debt-card">
+                          <div class="split-label">Dívida (Bancos / Debêntures)</div>
+                          <div class="split-pct" id="debt-money-val">R$ 750M</div>
+                          <div class="split-money">Captação Externa de Longo Prazo</div>
+                        </div>
+                        <div class="split-card equity-card">
+                          <div class="split-label">Equity (Sócios / Sponsors)</div>
+                          <div class="split-pct" id="equity-money-val">R$ 250M</div>
+                          <div class="split-money">Aporte de Capital Próprio</div>
+                        </div>
+                      </div>
+
+                      <div class="leverage-impact-alert">
+                        <span>Multiplicador de Alavancagem sobre o Capital dos Sócios:</span>
+                        <strong id="roe-multiplier-val" class="term-highlight">4.0x</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tópico 2: O Indicador de Ouro (DSCR) -->
+                  <div class="topic-block">
+                    <div class="topic-header">
+                      <span class="topic-tag">Métrica Suprema</span>
+                      <h3 class="topic-title">O Indicador de Ouro (<span class="term-highlight">DSCR</span>)</h3>
+                    </div>
+                    <p class="topic-body">
+                      Esqueça o EBITDA por um minuto: em Project Finance, o EBITDA não paga boletos. Os credores olham obsessivamente para o <strong>DSCR (<span class="term-highlight">Debt Service Coverage Ratio</span> — Índice de Cobertura do Serviço da Dívida)</strong>. Ele calcula quantas vezes o fluxo de caixa livre operacional do projeto (<strong class="term-contrast">CFADS</strong> — <em>Cash Flow Available for Debt Service</em>) cobre os juros e amortizações devidos no ano:
+                    </p>
+
+                    <!-- Termômetro Interativo do DSCR -->
+                    <div class="dscr-tool-card">
+                      <div class="dscr-val-header">
+                        <div>
+                          <div style="font-size:0.70rem; color:var(--text-muted); text-transform:uppercase;">Índice DSCR Atual</div>
+                          <div class="dscr-big-num" id="dscr-number-val">1.35x</div>
+                        </div>
+                        <span id="dscr-status-tag" class="status-badge-dscr safe">✅ Grau Bancável Padrão</span>
+                      </div>
+
+                      <input type="range" id="dscr-slider" class="sim-slider" min="0.8" max="2.0" step="0.05" value="1.35" aria-label="Calibrar índice DSCR do projeto">
+
+                      <div class="dscr-gauge-track">
+                        <div class="dscr-gauge-bar" id="dscr-meter-bar" style="width: 45%;"></div>
+                      </div>
+
+                      <div class="dscr-explain-box" id="dscr-explain-text">
+                        <strong>Zona Ideal do Estruturador:</strong> Existe margem de segurança de 35% acima da prestação da dívida. Se o DSCR for de 1.0x, qualquer desvio de tráfego ou estiagem provoca calote. Bancos e debenturistas exigem essa "gordura" mínima (geralmente entre 1.25x e 1.35x).
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tópico 3: Debêntures de Infraestrutura -->
+                  <div class="topic-block">
+                    <div class="topic-header">
+                      <span class="topic-tag">Mercado de Capitais</span>
+                      <h3 class="topic-title"><span class="term-highlight">Debêntures de Infraestrutura</span></h3>
+                    </div>
+                    <p class="topic-body">
+                      O <strong>BNDES não atua mais sozinho</strong> como o único grande financiador do país. A maior revolução dos últimos anos foi a expansão maciça das <strong>Debêntures Incentivadas (Lei nº 12.431/11)</strong> e das novas <strong>Debêntures de Infraestrutura (Lei nº 14.801/24)</strong>. Isentas de Imposto de Renda para pessoas físicas, esses títulos conectaram a poupança do investidor comum na Bolsa diretamente ao financiamento de grandes parques eólicos, linhas de transmissão, rodovias concedidas e redes de saneamento básico.
+                    </p>
+                  </div>
+
+                </div>
+              </article>
+
+              <!-- ====================================================================
+                   CARD C: TOOLKIT DA INTERNET (RADAR DE INFRAESTRUTURA)
+                   ==================================================================== -->
+              <article class="modular-card" data-card-id="card-c" id="card-c-toolkit">
+                <button class="card-header" type="button" aria-expanded="false" aria-controls="content-card-c">
+                  <div class="card-icon-wrapper color-c" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <line x1="2" y1="12" x2="22" y2="12"/>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                  </div>
+                  <div class="card-title-group">
+                    <span class="card-badge">Card C • Radar de Infraestrutura</span>
+                    <h2 class="card-title">Toolkit da Internet: As Fontes do Setor</h2>
+                  </div>
+                  <div class="card-chevron" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                  </div>
+                </button>
+
+                <div class="card-content" id="content-card-c">
+                  <p class="content-lead">
+                    Links externos rápidos e otimizados com pré-carregamento de DNS para você acompanhar onde os projetos bilionários estão sendo leiloados e financiados no Brasil:
+                  </p>
+
+                  <div class="toolkit-list">
+
+                    <!-- Link 1: Portal do PPI -->
+                    <a href="https://www.ppi.gov.br" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="toolkit-link-btn" 
+                       data-category="Governo & Leilões">
+                      <div class="toolkit-link-info">
+                        <div class="toolkit-title-row">
+                          <span class="toolkit-link-title">Portal do PPI (Programa de Parcerias de Investimentos)</span>
+                          <span class="toolkit-badge">Pipeline Oficial</span>
+                        </div>
+                        <span class="toolkit-link-desc">
+                          O site oficial da Presidência da República onde estão listados todos os <strong>leilões, privatizações e concessões</strong> públicas do país. O <em>pipeline</em> futuro de projetos que vão demandar bilhões em Project Finance está documentado aqui.
+                        </span>
+                      </div>
+                      <div class="toolkit-ext-icon" aria-hidden="true">↗</div>
+                    </a>
+
+                    <!-- Link 2: BNDES Canal do Desenvolvedor -->
+                    <a href="https://www.bndes.gov.br" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="toolkit-link-btn" 
+                       data-category="Financiador de Fomento">
+                      <div class="toolkit-link-info">
+                        <div class="toolkit-title-row">
+                          <span class="toolkit-link-title">BNDES (Canal do Desenvolvedor & Financiamentos)</span>
+                          <span class="toolkit-badge">TLP & Critérios ESG</span>
+                        </div>
+                        <span class="toolkit-link-desc">
+                          Hub obrigatório para consultar as <strong>taxas de juros de longo prazo (TLP)</strong>, condições de linhas de fomento e como o maior banco de desenvolvimento do país estrutura exigências socioambientais e de governança (<strong>ESG</strong>) para liberar crédito.
+                        </span>
+                      </div>
+                      <div class="toolkit-ext-icon" aria-hidden="true">↗</div>
+                    </a>
+
+                    <!-- Link 3: ABDIB -->
+                    <a href="https://www.abdib.org.br" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="toolkit-link-btn" 
+                       data-category="Radar dos Grandes Players">
+                      <div class="toolkit-link-info">
+                        <div class="toolkit-title-row">
+                          <span class="toolkit-link-title">ABDIB (Associação Brasileira da Infraestrutura)</span>
+                          <span class="toolkit-badge">Relatórios & Gargalos</span>
+                        </div>
+                        <span class="toolkit-link-desc">
+                          O termômetro dos principais operadores privados e fundos de investimento. Ideal para acessar <strong>relatórios macroeconômicos</strong>, diagnósticos sobre gargalos regulatórios e volumes projetados de investimento em saneamento, energia, rodovias e logística.
+                        </span>
+                      </div>
+                      <div class="toolkit-ext-icon" aria-hidden="true">↗</div>
+                    </a>
+
+                  </div>
+                </div>
+              </article>
+
+            </div> <!-- Fim de .cards-container -->
+
+            <!-- ====================================================================
+                 RODAPÉ 100% LIMPO: SÍNTESE FINAL E DISCRETO LINK DE AVANÇO
+                 ATENÇÃO À RESTRIÇÃO EXPRESSA DO PRD:
+                 NÃO possui botão verde fixo "Estou Pronto: Iniciar Avaliação".
+                 A passagem ocorre via link discreto ao final do último parágrafo.
+                 ==================================================================== -->
+            <section class="final-reading-section" id="final-reading-section">
+              <div class="final-synthesis-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Síntese do Estruturador
+              </div>
+
+              <p class="final-paragraph">
+                O estruturador de <strong>Project Finance</strong> não tenta eliminar as incertezas de um megaprojeto; sua missão é <strong>alocar cada risco cirurgicamente</strong> à parte com melhor capacidade técnica e financeira de absorvê-lo. Blindando o projeto dentro de uma <strong>SPE</strong>, equilibrando alavancagem com um <strong>DSCR robusto</strong> e amarrando empreiteiras e clientes em contratos impecáveis, grandes obras transformam o país sem colocar em risco a existência de seus acionistas.
+              </p>
+
+              <!-- O Discreto Link de Texto Requerido pelo PRD -->
+              <div class="advance-link-wrapper">
+                <a href="#avaliacao" id="advance-reading-link" class="advance-discrete-link" role="button">
+                  <span>Concluir leitura e avançar</span>
+                  <span class="link-arrow" aria-hidden="true">→</span>
+                </a>
+
+                <div id="advance-reading-status" class="advance-reading-status" aria-live="polite">
+                  <span>Leitura do Passo 6 ativa</span>
+                </div>
+              </div>
+
+              <!-- Feedback Inline Suave (Sem modais invasivos ou bloqueios de tela) -->
+              <div id="advance-reading-feedback" class="advance-feedback-box hidden" role="region" aria-live="polite">
+                <div class="feedback-headline">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                  Leitura Concluída com Sucesso!
+                </div>
+                <p>
+                  Sua permanência no módulo foi registrada pelo sensor silencioso. Você agora domina a lógica de <strong>SPE, Alavancagem, DSCR e Matriz Contratual</strong>. O acesso à avaliação está liberado no ambiente acadêmico.
+                </p>
+              </div>
+
+            </section>
+
+          </div> <!-- Fim de .mobile-app-wrapper -->
+        </div> <!-- Fim de #phone-scrollable-area -->
+
+        <!-- Barra inferior Home Indicator (estilo iOS discreto) -->
+        <div class="phone-home-indicator" aria-hidden="true"></div>
+
+      </div> <!-- Fim de .smartphone-screen -->
+    </main> <!-- Fim de .smartphone-device -->
+
+  </div> <!-- Fim de .desktop-wrapper -->
+
+  <!-- ========================================================================
+       PAINEL LATERAL DISCRETO DO PROFESSOR (DRAWER NÃO-BLOQUEANTE)
+       ======================================================================== -->
+  <aside id="inspector-drawer" class="inspector-drawer" aria-label="Painel de Telemetria Acadêmica" aria-hidden="true">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Telemetria & Micro-tracking (Docente)</h3>
+      <button id="close-inspector-btn" class="close-drawer-btn" type="button" aria-label="Fechar painel">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="telemetry-stats-row">
+        <div class="stat-box">
+          <div class="stat-label">Max Scroll</div>
+          <div id="inspector-max-scroll" class="stat-val">0%</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Eventos</div>
+          <div id="inspector-events-count" class="stat-val">0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Tempo Ativo</div>
+          <div id="inspector-session-time" class="stat-val">0s</div>
+        </div>
+      </div>
+
+      <div class="silent-status-indicator">
+        <div style="font-size:0.68rem; color:var(--text-muted); margin-bottom:3px; text-transform:uppercase;">Sensor Silencioso (Card C > 3s):</div>
+        <div id="inspector-silent-status">
+          <span class="status-pending-text">⏳ Aguardando leitura de 3s no Card C</span>
+        </div>
+      </div>
+
+      <div style="font-size:0.72rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; margin-top:4px;">Últimos Registros:</div>
+      <div id="inspector-events-list" class="events-scroll-area">
+        <p class="empty-events-text">Nenhum evento registrado ainda.</p>
+      </div>
+
+      <div class="drawer-actions">
+        <button id="copy-metrics-btn" class="copy-json-btn" type="button">
+          Copiar Relatório JSON para LMS
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Scripts Técnicos -->
+  <script src="./js/analytics.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
