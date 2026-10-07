@@ -1,5 +1,7 @@
 # 🏗️ Passo 6 — Radar do Estruturador: Financiamento de Projetos (Project Finance)
 
+> 🌐 **Acesso Online (GitHub Pages):** [https://ramaandrade.github.io/radar-estruturador-project-finance/](https://ramaandrade.github.io/radar-estruturador-project-finance/)  
+> 📦 **Repositório GitHub:** [https://github.com/ramaandrade/radar-estruturador-project-finance](https://github.com/ramaandrade/radar-estruturador-project-finance)  
 > 📱 **Formato:** App Web Mobile (*Single-Page Scroller*) Mobile-First & Fast Page  
 > 🧭 **Posição na Trilha:** Passo 6 de 6 (Encerramento da jornada sobre grandes captações de capital)  
 > 🏛️ **Público-Alvo:** Estudantes de Finanças Corporativas, Engenharia Financeira, Administração e Mercado de Capitais  
